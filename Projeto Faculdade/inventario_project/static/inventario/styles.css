@@ -1,0 +1,161 @@
+/* Estilos Globais */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 3%;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h3 {
+    text-align: center;
+    color: #333;
+    margin-right: 20%;
+    margin-left: 20%;
+    font-weight: 700;
+}
+
+/* Container principal para o formulário e a lista */
+.container {
+    max-width: 900px;  /* Largura máxima tanto para o formulário quanto para a lista */
+    margin: 0 auto;    /* Centraliza o container */
+    padding: 20px;
+}
+
+/* Estilos para o formulário */
+form {
+    background-color: #fff;
+    padding: 30px;
+    max-width: 600px; /* Largura máxima do formulário */
+    margin: 0 auto; /* Centraliza o formulário */
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+form p {
+    margin-bottom: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+button {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+a {
+    color: #28a745;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 15px;
+    text-align: center;
+    display: inline-block;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Lista de Itens */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto; /* Centraliza a lista */
+    max-width: 600px; /* Limita a largura máxima da lista */
+}
+
+li {
+    background-color: #fff;
+    padding: 15px 25px; /* Espaçamento interno dinâmico para o conteúdo */
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que o conteúdo quebre a linha, ajustando o espaçamento */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+li:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+}
+
+li span {
+    font-weight: bold;
+    color: #333;
+}
+
+li .preco {
+    color: #28a745;
+    font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    form, ul {
+        max-width: 100%; /* Permite que o formulário e a lista ocupem a largura total em telas menores */
+    }
+
+    input, textarea, button {
+        font-size: 1rem;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 15px; /* Ajusta o espaçamento interno para telas menores */
+    }
+}

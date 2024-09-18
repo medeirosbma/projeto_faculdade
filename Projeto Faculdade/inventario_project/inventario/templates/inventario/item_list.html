@@ -1,0 +1,17 @@
+{% extends 'inventario/model_page.html' %}
+
+{% block content %}
+    <h1>Lista de Itens</h1>
+    
+    
+    <ul>
+        <a href="{% url 'item_create' %}">Adicionar Novo Item</a>
+        {% for item in items %}
+            <li><b>Nome do item:</b> {{ item.nome }} <td> <b>Quantidade:</b> {{ item.quantidade }} <br> <b>Preço</b> R$ {{ item.preco }}</li>
+        {% empty %}
+           <li>Nenhum item encontrado.</li> 
+        {% endfor %}
+        
+    </ul>
+    <script href="/inventario_project/static/inventario/scripts.js"></script>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'inventario/model_page.html' %}
+
+{% block content %}
+    <h1>Cadastro de itens no inventário</h1>
+    <h3>Esta página pode servir como um registro de itens comprados, armazenados para checagem de desvalorização, ou até mesmo como um controle financeiro. Tudo depende da criatividade do usuário</h3>
+       
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Salvar</button>
+        <a href="{% url 'item_list' %}">Voltar para a lista</a>
+    </form>
+    
+    {% endblock %}
