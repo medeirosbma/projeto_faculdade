@@ -6,12 +6,17 @@
     
     <ul>
         <a href="{% url 'item_create' %}">Adicionar Novo Item</a>
+    </ul>
+    
+    <ul>   
         {% for item in items %}
-            <li><b>Nome do item:</b> {{ item.nome }} <td> <b>Quantidade:</b> {{ item.quantidade }} <br> <b>Preço</b> R$ {{ item.preco }}</li>
+            <li>  <b>Nome:</b> {{ item.nome }} 
+            <td> <b>Quantidade:</b> {{ item.quantidade }} <b>Preço</b> R$ {{ item.preco }} <b>Item ID:</b> {{ item.id}}
+            <td > <a href="/deletar_item/{{item.id}}" >Deletar Registro</a> 
+            </li>
         {% empty %}
            <li>Nenhum item encontrado.</li> 
         {% endfor %}
         
     </ul>
-    <script href="/inventario_project/static/inventario/scripts.js"></script>
 {% endblock %}

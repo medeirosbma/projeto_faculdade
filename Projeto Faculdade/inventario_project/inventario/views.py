@@ -24,3 +24,9 @@ def item_create(request):
         form = ItemForm()
     return render(request, 'inventario/item_form.html', {'form': form})
 
+def deletar_item(request, id):
+    item = Item.objects.filter(id=id)
+    item.delete()
+    items = Item.objects.all()
+    return render(request, 'inventario/item_list.html', {'items': items})
+
